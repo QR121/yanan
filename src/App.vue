@@ -10,7 +10,7 @@
         </div>
         <div class="nav"></div>
         <div>
-          <Table></Table>
+          <Table> </Table>
         </div>
       </div>
     </div>

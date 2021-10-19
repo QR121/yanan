@@ -2,7 +2,7 @@
   <div id="search-box">
       <div class="left">
         <div class="trangle">全文</div>
-        <input type="">
+        <input type="text" v-model="searchKey">
       </div>
       <div class="right">
         <button>搜索</button>
@@ -16,6 +16,16 @@
 export default {
   name: 'SearchBox',
   components: {
+  },
+  data: function() {
+    return {
+      searchKey: ''
+    }
+  },
+  watch: {
+    searchKey: function() {
+      
+    }
   }
 }
 </script>

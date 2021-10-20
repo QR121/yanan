@@ -46,7 +46,7 @@ export default {
 }
 
 .left input {
-  width: 250px;
+  width: 350px;
   background-color:transparent;
   border-width: 0;
   margin-left: 35px;
@@ -91,6 +91,6 @@ export default {
 
 .right>span {
   color: black;
-    font-size: 16px;
+  font-size: 16px;
 }
 </style>

@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div class="top">
+        <router-link to="/login" style="color: black">登录</router-link>
+    </div>
     <div class="body">
       <div class="left">
         <TableBar></TableBar>
@@ -57,7 +60,6 @@ export default {
   .body>.right {
     margin-left: 40px;
     width: 810px;
-    /* border: 2px solid #d1130a; */
   }
 
   .content {
@@ -66,5 +68,13 @@ export default {
 
   .nav {
       height: 30px;
+  }
+
+  .top {
+    float: right;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px 30px;
   }
 </style>

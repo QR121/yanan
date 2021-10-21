@@ -3,16 +3,15 @@
     <div class="tab-bar">
       <div class="back">返&emsp;回</div>
       <ul>
-        <li class="item">图&emsp;书</li>
-        <li class="item">期&emsp;刊</li>
-        <li class="item">报&emsp;纸</li>
-        <li class="item">图&emsp;片</li>
-        <li class="item">档&emsp;案</li>
-        <li class="item">音视频</li>
-        <li class="item">手&emsp;稿</li>
-        <li class="item">日&emsp;记</li>
-        <li class="item">书&emsp;信</li>
-        <li class="item">登&emsp;录</li>
+        <li class="item"><div class="star">图&emsp;书({{value}})</div></li>
+        <li class="item"><div class="star">期&emsp;刊({{value}})</div></li>
+        <li class="item"><div class="star">报&emsp;纸({{value}})</div></li>
+        <li class="item"><div class="star">图&emsp;片({{value}})</div></li>
+        <li class="item"><div class="star">档&emsp;案({{value}})</div></li>
+        <li class="item"><div class="star">音视频({{value}})</div></li>
+        <li class="item"><div class="star">手&emsp;稿({{value}})</div></li>
+        <li class="item"><div class="star">日&emsp;记({{value}})</div></li>
+        <li class="item"><div class="star">书&emsp;信({{value}})</div></li>
       </ul>
     </div>
   </div>
@@ -27,6 +26,7 @@ export default {
   data: function () {
     return {
       tabs: ['图书', '期刊', '报纸'],
+      value: 0
     }
   }
 }
@@ -36,12 +36,8 @@ export default {
 <style>
 
 .tab-bar {
-    /* position: relative;
-    left: 200px;
-    top: 150px; */
     height: 430px;
     width: 200px;
-    /* border: 1px solid red; */
     background-image: url('../assets/icon-bj.png');
     background-repeat: no-repeat;
     background-size: 705%;
@@ -55,16 +51,28 @@ export default {
   font-size: 22px;
   padding: 7px 35px;
   margin-left: 40px;
-  /* border: 1px solid red; */
 }
 
 ul {
     margin-top: 56px;
 }
+
 .item {
   color: #b4180c;
-  margin-top: 11.5px;
-  margin-left: 90px;
+  margin-top: 15px;
+  margin-left: 55px;
   font-size: 18px;
+}
+
+.star  {
+  padding-left:30px ;
+  height: 20px;
+  width: 130px;
+  background-repeat: no-repeat;
+  background-size: 1000%;
+  background-position: -320px -393px;
+  overflow: hidden;
+  background-image: url(../assets/icon-star.png);
+  /* border: 1px solid red; */
 }
 </style>

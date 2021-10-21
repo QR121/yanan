@@ -1,7 +1,16 @@
 <template>
   <div id="search-box">
-      <div class="left">
-        <div class="trangle">全文</div>
+      <div class="left" @select="select" >
+        <div @click="clickSelect" style="display: inline-block">
+          <div class="trangle" >{{categoryId}}</div>
+            <div class="select">
+              <ul>
+                <li v-for="item in category" @click="select(item.id)" v-if="isShow" class="select-item">
+                  <div >{{item.id}}</div>
+                </li>
+              </ul>
+          </div>
+        </div>
         <input type="text" v-model="searchKey">
       </div>
       <div class="right">
@@ -19,12 +28,29 @@ export default {
   },
   data: function() {
     return {
-      searchKey: ''
+      searchKey: '',
+      categoryId: '全部',
+      category: [
+        {id:'全部', value:''},
+        {id:'全文', value:''},
+        {id:'提名', value:''},
+        {id:'作者', value:''},
+        {id:'出版社', value:''},
+      ],
+      isShow: false,
     }
   },
   watch: {
     searchKey: function() {
       
+    }
+  },
+  methods: {
+    select: function(value) {
+      this.categoryId = value;
+    },
+    clickSelect: function() {
+      this.isShow = !this.isShow
     }
   }
 }
@@ -32,6 +58,7 @@ export default {
 
 <style>
 #search-box {
+  position: relative;
   display: flex;
   height: 42px;
   min-width: 660px;
@@ -54,10 +81,26 @@ export default {
 
 .trangle {
   display: inline-block;
-  position: relative;
   margin: 10px 0px 10px 30px;
   padding-right: 40px;
   border-right: 2px solid #d1130a;
+}
+.select {
+  position: absolute;
+  top: -14px;
+  left: 0;
+}
+
+.select-item {
+  width: 112px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #c60f08;
+}
+
+.select li:hover{
+  color: #c60f08;
+  background-color: #ffffff;
 }
 
 .trangle::after {
@@ -71,6 +114,10 @@ export default {
   border-color: #d1130a;
   border-style: solid;
   transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: 5s;
 }
 
 

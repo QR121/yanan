@@ -72,7 +72,7 @@ export default {
 .login {
   width: 770px;
   height: 500px;
-  margin: 300px auto 0;
+  margin: 200px auto 0;
   border: 1px solid rgb(218, 214, 192);
   border-radius: 5px;
   background:rgba(255, 255, 255, 0.4);
@@ -84,7 +84,8 @@ export default {
 h3 {
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 5px solid red;
+  line-height: 55px;
+  border-left: 10px solid red;
 }
 
 .bottom{
@@ -111,12 +112,12 @@ h3 {
 .id{
   position: absolute;
   left: 150px;
-  top: 13px;
+  top: 30px;
 }
 .pwd{
   position: absolute;
   left: 150px;
-  top: 98px;
+  top: 110px;
 
 }
 .input_style {

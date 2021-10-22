@@ -41,13 +41,21 @@
           <input type="text" name="" id="" />
         </div>
       </div>
+      <div class="time">
+        <h3>时间范围</h3>
+        <div class="timgSelect">
+        <input type="text" id="time" width="50%" placeholder="请输入时间，例如：2000-01" />
+        <span>至</span>
+        <input type="text" id="time" width="50%"/></div>
+      </div>
     </div>
+    <!-- 时间选择器 -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "Hsearch",
+  name: "App",
   data() {
     return {
       name: "题名",
@@ -64,7 +72,7 @@ export default {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-image: url("./assets/pic-bj.jpg");
+  /* background-image: url("./assets/pic-bj.jpg"); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -97,5 +105,22 @@ export default {
 input {
   border: none;
   width: 80%;
+}
+/* 时间 */
+.time {
+  width: 500px;
+  height:100px;
+  /* border: 1px solid black; */
+  margin-top: 20px;
+}
+.timgSelect{
+  display: flex;
+
+}
+h3{
+  text-align: center;
+}
+#time{
+  border: 1px solid gray;
 }
 </style>

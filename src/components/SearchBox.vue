@@ -15,7 +15,9 @@
       </div>
       <div class="right">
         <button>搜索</button>
-        <span style="marginLeft:20px">高级搜索</span>
+          <router-link to="/search">
+           <span style="marginLeft:20px">高级搜索</span>
+          </router-link>
       </div>
   </div>
 </template>
@@ -76,6 +78,7 @@ export default {
   width: 350px;
   background-color:transparent;
   border-width: 0;
+  outline: 0;
   margin-left: 35px;
 }
 
@@ -132,11 +135,12 @@ export default {
   font-size: 18px;
   padding: 8px 25px;
   margin-left: 20px;
+  outline: 0;
   border-width: 0;
   background-color: #c60f08;
 }
 
-.right>span {
+.right span {
   color: black;
   font-size: 16px;
 }

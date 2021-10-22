@@ -1,4 +1,5 @@
 <template>
+<div>
   <div id="table">
     <table border="0" cellspacing="0">
       <tr style="background: #c60f08;color: #ffffff;">
@@ -13,32 +14,32 @@
         <td>{{item.age}}</td>
         <td>{{item.age}}</td>
       </tr>
-      <!-- <pagination style="height:100px;width:100px" v-model = "page" :srecords = " 500 " @ paginate = "myCallback">ss</pagination> -->
     </table>
  </div>
+ <Pagination class="pagination" :upName="上一页" :downName="下一页" :pageCount ="100" :currentPage ="1" :pageSize="10" />
+</div>
+
 </template>
 
 <script>
 import Vuetable from 'vuetable-2'
-import Pagination from 'vue-pagination-2';
+import Pagination from 'el-pagination/Pagination'
 export default {
   name: 'Table',
   components: {
     Vuetable,
-    Pagination,
+    Pagination
   },
   data: function () {
     return {
-      tabs: ['','','','','','','','','','',]
+      tabs: ['','','','','','','','','','',],
       }
   }
 }
 </script>
 
 <style>
-#table{
 
-}
 table {
   width: 800px;
 }
@@ -55,4 +56,24 @@ table tr th{
 tr td{
   height: 30px;
 }
+.pagination {
+  margin-left: 60px;
+}
+
+.pagination button {
+  padding: 7px;
+  color: #ffffff;
+  background: #d1130a;
+  border-width: 0;
+}
+
+.pagination ul {
+  margin-top: 20px;
+}
+
+.pagination li{
+  color: #ffffff;
+  background: #d1130a;
+}
+
 </style>

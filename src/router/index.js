@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router';
 import Home from '../components/Home';
 import Login from '../components/Login'
-
+import Pagination from 'vue-pagination-2'
+Vue.component('pagination', Pagination)
 Vue.use(VueRouter);
 
 const routes = [
@@ -12,7 +13,9 @@ const routes = [
       },
       {
         path: '/home',
-        component: Home
+        component: Home,
+        children: [
+        ]
       },
       {
         path: '/login',

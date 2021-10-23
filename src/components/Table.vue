@@ -9,10 +9,10 @@
         <th>在线阅读</th>
       </tr>
       <tr v-for="item in tabs">
-        <td>{{item.name}}</td>
-        <td>{{item.age}}</td>
-        <td>{{item.age}}</td>
-        <td>{{item.age}}</td>
+        <td><div @click="readPdf('')">梦的解析</div></td>
+        <td>弗洛伊德</td>
+        <td>2021/10/23</td>
+        <td><div @click="readPdf('')">阅读</div></td>
       </tr>
     </table>
  </div>
@@ -24,6 +24,7 @@
 <script>
 import Vuetable from 'vuetable-2'
 import Pagination from 'el-pagination/Pagination'
+
 export default {
   name: 'Table',
   components: {
@@ -34,7 +35,13 @@ export default {
     return {
       tabs: ['','','','','','','','','','',],
       }
-  }
+  },
+  methods: {
+    readPdf: function (filePath){
+	     var previewURL= "";
+       window.open('../../static/pdf/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf'+encodeURIComponent(filePath));
+    }
+  },
 }
 </script>
 
@@ -55,6 +62,11 @@ table tr th{
 }
 tr td{
   height: 30px;
+  text-align: center;
+}
+
+td div:hover{
+color: #d1130a;
 }
 .pagination {
   margin-left: 60px;
@@ -65,6 +77,7 @@ tr td{
   color: #ffffff;
   background: #d1130a;
   border-width: 0;
+  outline: 0;
 }
 
 .pagination ul {

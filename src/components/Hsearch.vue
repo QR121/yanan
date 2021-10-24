@@ -48,6 +48,10 @@
         <span>至</span>
         <input type="text" id="time" width="50%"/></div>
       </div>
+    <!-- 检索 -->
+    <div class="search">
+      <p>检索</p>
+    </div>
     </div>
     <!-- 时间选择器 -->
   </div>
@@ -122,5 +126,8 @@ h3{
 }
 #time{
   border: 1px solid gray;
+}
+.search{
+  background-color: red;
 }
 </style>

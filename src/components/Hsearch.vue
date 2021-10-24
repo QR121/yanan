@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="Hsearch">
     <div id="Hsearch">
       <div class="select">
         <select name="search" class="selectMain">
@@ -66,8 +66,8 @@ export default {
 };
 </script>
 
-<style>
-#app {
+<style scoped>
+.Hsearch {
   min-width: 1200px;
   position: fixed;
   height: 100%;

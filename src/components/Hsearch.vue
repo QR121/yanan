@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   min-width: 1200px;
   position: fixed;

@@ -65,7 +65,7 @@ export default {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-image: url("../assets/pic-bj.jpg");
+  background-image: url("../../assets/pic-bj.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

@@ -15,7 +15,7 @@
       </div>
       <div class="right">
         <button>搜索</button>
-          <router-link to="/search">
+          <router-link to="/hsearch">
            <span style="marginLeft:20px">高级搜索</span>
           </router-link>
       </div>
